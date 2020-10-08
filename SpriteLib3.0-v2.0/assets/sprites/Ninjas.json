@@ -1,0 +1,372 @@
+{
+	"frames": [
+		{
+			"filename": "SNinja_Atk 1.png",
+			"frame": {
+				"x": 1,
+				"y": 1,
+				"w": 512,
+				"h": 256
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 512,
+				"h": 256
+			},
+			"sourceSize": {
+				"w": 512,
+				"h": 256
+			}
+		},
+		{
+			"filename": "SNinja_Atk 2.png",
+			"frame": {
+				"x": 515,
+				"y": 1,
+				"w": 512,
+				"h": 256
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 512,
+				"h": 256
+			},
+			"sourceSize": {
+				"w": 512,
+				"h": 256
+			}
+		},
+		{
+			"filename": "SNinja_Atk 3.png",
+			"frame": {
+				"x": 1,
+				"y": 259,
+				"w": 512,
+				"h": 256
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 512,
+				"h": 256
+			},
+			"sourceSize": {
+				"w": 512,
+				"h": 256
+			}
+		},
+		{
+			"filename": "SNinja_Atk 4.png",
+			"frame": {
+				"x": 515,
+				"y": 259,
+				"w": 512,
+				"h": 256
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 512,
+				"h": 256
+			},
+			"sourceSize": {
+				"w": 512,
+				"h": 256
+			}
+		},
+		{
+			"filename": "SNinja_Atk 5.png",
+			"frame": {
+				"x": 1,
+				"y": 517,
+				"w": 512,
+				"h": 256
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 512,
+				"h": 256
+			},
+			"sourceSize": {
+				"w": 512,
+				"h": 256
+			}
+		},
+		{
+			"filename": "SNinja_Atk 6.png",
+			"frame": {
+				"x": 515,
+				"y": 517,
+				"w": 512,
+				"h": 256
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 512,
+				"h": 256
+			},
+			"sourceSize": {
+				"w": 512,
+				"h": 256
+			}
+		},
+		{
+			"filename": "SNinja_run 01.png",
+			"frame": {
+				"x": 1,
+				"y": 775,
+				"w": 512,
+				"h": 256
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 512,
+				"h": 256
+			},
+			"sourceSize": {
+				"w": 512,
+				"h": 256
+			}
+		},
+		{
+			"filename": "SNinja_run 02.png",
+			"frame": {
+				"x": 515,
+				"y": 775,
+				"w": 512,
+				"h": 256
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 512,
+				"h": 256
+			},
+			"sourceSize": {
+				"w": 512,
+				"h": 256
+			}
+		},
+		{
+			"filename": "SNinja_run 03.png",
+			"frame": {
+				"x": 1,
+				"y": 1033,
+				"w": 512,
+				"h": 256
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 512,
+				"h": 256
+			},
+			"sourceSize": {
+				"w": 512,
+				"h": 256
+			}
+		},
+		{
+			"filename": "SNinja_run 04.png",
+			"frame": {
+				"x": 515,
+				"y": 1033,
+				"w": 512,
+				"h": 256
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 512,
+				"h": 256
+			},
+			"sourceSize": {
+				"w": 512,
+				"h": 256
+			}
+		},
+		{
+			"filename": "SNinja_run 05.png",
+			"frame": {
+				"x": 1029,
+				"y": 1,
+				"w": 512,
+				"h": 256
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 512,
+				"h": 256
+			},
+			"sourceSize": {
+				"w": 512,
+				"h": 256
+			}
+		},
+		{
+			"filename": "SNinja_run 06.png",
+			"frame": {
+				"x": 1029,
+				"y": 259,
+				"w": 512,
+				"h": 256
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 512,
+				"h": 256
+			},
+			"sourceSize": {
+				"w": 512,
+				"h": 256
+			}
+		},
+		{
+			"filename": "SNinja_run 07.png",
+			"frame": {
+				"x": 1029,
+				"y": 517,
+				"w": 512,
+				"h": 256
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 512,
+				"h": 256
+			},
+			"sourceSize": {
+				"w": 512,
+				"h": 256
+			}
+		},
+		{
+			"filename": "SNinja_run 08.png",
+			"frame": {
+				"x": 1029,
+				"y": 775,
+				"w": 512,
+				"h": 256
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 512,
+				"h": 256
+			},
+			"sourceSize": {
+				"w": 512,
+				"h": 256
+			}
+		},
+		{
+			"filename": "SNinja_run 09.png",
+			"frame": {
+				"x": 1029,
+				"y": 1033,
+				"w": 512,
+				"h": 256
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 512,
+				"h": 256
+			},
+			"sourceSize": {
+				"w": 512,
+				"h": 256
+			}
+		},
+		{
+			"filename": "SNinja_run 10.png",
+			"frame": {
+				"x": 1,
+				"y": 1291,
+				"w": 512,
+				"h": 256
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 512,
+				"h": 256
+			},
+			"sourceSize": {
+				"w": 512,
+				"h": 256
+			}
+		},
+		{
+			"filename": "SNinja_run 11.png",
+			"frame": {
+				"x": 515,
+				"y": 1291,
+				"w": 512,
+				"h": 256
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 512,
+				"h": 256
+			},
+			"sourceSize": {
+				"w": 512,
+				"h": 256
+			}
+		}
+	],
+	"meta": {
+		"app": "http://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"image": "spritesheet.png",
+		"format": "RGBA8888",
+		"size": {
+			"w": 1542,
+			"h": 1548
+		},
+		"scale": "1"
+	}
+}
