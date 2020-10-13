@@ -78,7 +78,6 @@ void Scene::Update()
 	
 	tempSpr.SetTransparency((0.5 * sin(Timer::time * 3.f)) + 0.5f);
 }
-
 void Scene::AdjustScrollOffset()
 {
 	float maxSizeX = ECS::GetComponent<Camera>(MainEntities::MainCamera()).GetOrthoSize().y;
@@ -89,7 +88,51 @@ void Scene::AdjustScrollOffset()
 	ECS::GetComponent<HorizontalScroll>(MainEntities::MainCamera()).SetOffset((maxSizeX * BackEnd::GetAspectRatio()) - playerHalfSize);
 	ECS::GetComponent<VerticalScroll>(MainEntities::MainCamera()).SetOffset(maxSizeY - playerHalfSize);
 }
+void Scene::CreateCamera(vec4 position,float windowWidth,float windowHeight) {
+	float aspectRatio = windowWidth / windowHeight;
+	auto entity = ECS::CreateEntity();
+	ECS::SetIsMainCamera(entity, true);
 
+	ECS::AttachComponent<Camera>(entity);
+	ECS::AttachComponent<HorizontalScroll>(entity);
+	ECS::AttachComponent<VerticalScroll>(entity);
+
+	ECS::GetComponent<Camera>(entity).SetOrthoSize(position);
+	ECS::GetComponent<Camera>(entity).SetWindowSize(vec2(float(windowWidth), float(windowHeight)));
+	ECS::GetComponent<Camera>(entity).Orthographic(aspectRatio, position.x, position.y, position.z, position.w, -100.f, 100.f);
+
+	ECS::GetComponent<HorizontalScroll>(entity).SetCam(&ECS::GetComponent<Camera>(entity));
+	ECS::GetComponent<VerticalScroll>(entity).SetCam(&ECS::GetComponent<Camera>(entity));
+}
+void Scene::CreateMainPhysicObject(b2World* m_physicsWorld,std::string fileName,int spriteWidth,int spriteLength,float spriteTransparency,vec3 position,float shrinkX,float shrinkY) {
+	auto entity = ECS::CreateEntity();
+	ECS::SetIsMainPlayer(entity, true);
+
+	//Add components
+	ECS::AttachComponent<Sprite>(entity);
+	ECS::AttachComponent<Transform>(entity);
+	ECS::AttachComponent<PhysicsBody>(entity);
+
+	//Setup components
+	ECS::GetComponent<Sprite>(entity).LoadSprite(fileName, spriteWidth, spriteLength);
+	ECS::GetComponent<Sprite>(entity).SetTransparency(spriteTransparency);
+	ECS::GetComponent<Transform>(entity).SetPosition(position);
+
+	auto& tempSpr = ECS::GetComponent<Sprite>(entity);
+	auto& tempPhsBody = ECS::GetComponent<PhysicsBody>(entity);
+
+	b2Body* tempBody;
+	b2BodyDef tempDef;
+
+	tempDef.type = b2_dynamicBody;
+	tempDef.position.Set(position.x, position.y);
+
+	tempBody = m_physicsWorld->CreateBody(&tempDef);
+
+	tempPhsBody = PhysicsBody(tempBody, float(tempSpr.GetWidth()), float(tempSpr.GetHeight()), vec2(0.f, 0.f), false);
+
+	ECS::GetComponent<PhysicsBody>(MainEntities::MainPlayer()).GetBody()->SetFixedRotation(true);
+}
 void Scene::CreateStaticObject(std::string fileName,int spriteWidth,int spriteHeight,float shrinkX,float shrinkY,vec3 position)
 {
 	auto entity = ECS::CreateEntity();

@@ -37,10 +37,11 @@ void Game::InitGame()
 	//Replace this with your own scene.
 	m_scenes.push_back(new FirstCreation("Default Scene"));
 	m_scenes.push_back(new PhysicsPlayground("PHYSICS PLAYGROUND TIEM!!!!"));
-	m_scenes.push_back(new AnimationSpritePlayground("Doesn Work!!!!!"));
+	m_scenes.push_back(new AnimationSpritePlayground("Doesnt Work!!!!!*gave up*"));
+	m_scenes.push_back(new Assignment("Game"));
 	 
 	//Sets active scene reference to our scene
-	m_activeScene = m_scenes[2];
+	m_activeScene = m_scenes[3];
 
 	m_activeScene->InitScene(float(BackEnd::GetWindowWidth()), float(BackEnd::GetWindowHeight()));
 

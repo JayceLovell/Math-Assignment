@@ -46,6 +46,10 @@ public:
 	virtual void MouseClick(SDL_MouseButtonEvent evnt) { };
 	virtual void MouseWheel(SDL_MouseWheelEvent evnt) { };
 
+
+	void CreateCamera(vec4 position, float windowWidth, float windowHeight);
+
+	void CreateMainPhysicObject(b2World* m_physicsWorld, std::string fileName, int spriteWidth, int spriteLength, float spriteTransparency, vec3 position, float shrinkX, float shrinkY);
 	/**
 	* Function to create entity with physics that doesn't move
 	* @param Will need filename the width of the sprite, the height of the sprite, and the position in vec3
