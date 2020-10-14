@@ -18,5 +18,5 @@ public:
 	void KeyboardUp() override;
 
 protected:
-
+	bool isJumping;
 };
