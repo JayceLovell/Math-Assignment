@@ -62,7 +62,7 @@ public:
 	/**
 	* Function to create entity with physics that moves
 	*/
-	void CreateMoveableObject(b2World* m_physicsWorld, std::string fileName, int spriteWidth, int spriteHeight, vec3 position);
+	void CreateMoveableObject(b2World* m_physicsWorld, std::string fileName, int spriteWidth, int spriteHeight, vec3 position, float shrinkX, float shrinkY);
 
 	//Get the scene registry
 	entt::registry* GetScene() const;

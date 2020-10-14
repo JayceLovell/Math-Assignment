@@ -121,15 +121,17 @@ void Scene::CreateMainPhysicObject(b2World* m_physicsWorld,std::string fileName,
 	auto& tempSpr = ECS::GetComponent<Sprite>(entity);
 	auto& tempPhsBody = ECS::GetComponent<PhysicsBody>(entity);
 
+
 	b2Body* tempBody;
 	b2BodyDef tempDef;
+
 
 	tempDef.type = b2_dynamicBody;
 	tempDef.position.Set(position.x, position.y);
 
 	tempBody = m_physicsWorld->CreateBody(&tempDef);
 
-	tempPhsBody = PhysicsBody(tempBody, float(tempSpr.GetWidth()), float(tempSpr.GetHeight()), vec2(0.f, 0.f), false);
+	tempPhsBody = PhysicsBody(tempBody, float(tempSpr.GetWidth() - shrinkX), float(tempSpr.GetHeight() - shrinkY), vec2(0.f, 0.f), false);
 
 	ECS::GetComponent<PhysicsBody>(MainEntities::MainPlayer()).GetBody()->SetFixedRotation(true);
 }
@@ -170,7 +172,7 @@ void Scene::CreateObject(std::string fileName,int spriteWidth,int spriteHeight,v
 	ECS::GetComponent<Transform>(entity).SetPosition(position);
 }
 
-void Scene::CreateMoveableObject(b2World* m_physicsWorld,std::string fileName, int spriteWidth, int spriteHeight, vec3 position) 
+void Scene::CreateMoveableObject(b2World* m_physicsWorld,std::string fileName, int spriteWidth, int spriteHeight, vec3 position, float shrinkX,float shrinkY) 
 {
 	//Create entity
 	auto entity = ECS::CreateEntity();
@@ -187,9 +189,6 @@ void Scene::CreateMoveableObject(b2World* m_physicsWorld,std::string fileName, i
 
 	auto& tempSpr = ECS::GetComponent<Sprite>(entity);
 	auto& tempPhsBody = ECS::GetComponent<PhysicsBody>(entity);
-
-	float shrinkX = 0.f;
-	float shrinkY = 0.f;
 
 	b2Body* tempBody;
 	b2BodyDef tempDef;
