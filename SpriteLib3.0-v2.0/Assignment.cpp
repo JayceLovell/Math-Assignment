@@ -35,7 +35,7 @@ void Assignment::InitScene(float windowWidth, float windowHeight)
 			}
 			else if (positionForX == 500.f)
 			{
-				Scene::CreateMoveableObject(m_physicsWorld,"LevelSprites/Grass.png",50, 50, vec3(positionForX, 1000.f, 5.f),40.f,0.f);
+				Scene::CreateMoveableObject(m_physicsWorld,"LevelSprites/Grass.png",50, 50, vec3(positionForX, 1000.f, 2.f),49.f,0.f);
 				Scene::CreateStaticObject("LevelSprites/Grass.png", 100, 100, 70.f, 20.f, vec3(positionForX, 0.f, 2.f));
 			}
 			else if (positionForX == 800.f)
