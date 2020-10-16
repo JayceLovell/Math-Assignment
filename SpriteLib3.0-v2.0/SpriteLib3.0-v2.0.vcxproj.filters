@@ -340,5 +340,11 @@
     <Image Include="..\..\..\..\..\Pictures\2020-09\NinjaSpriteSheetsLeft.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="G:\wayne\Desktop\NinjaSpriteSheets.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="G:\wayne\Desktop\NinjaSpriteSheetsLeft.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

@@ -246,6 +246,8 @@
   <ItemGroup>
     <Image Include="..\..\..\..\..\Pictures\2020-09\NinjaSpriteSheets.png" />
     <Image Include="..\..\..\..\..\Pictures\2020-09\NinjaSpriteSheetsLeft.png" />
+    <Image Include="G:\wayne\Desktop\NinjaSpriteSheets.png" />
+    <Image Include="G:\wayne\Desktop\NinjaSpriteSheetsLeft.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
