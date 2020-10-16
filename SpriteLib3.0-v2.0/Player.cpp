@@ -1,5 +1,5 @@
 #include "Player.h"
-
+bool jump = false;
 Player::Player()
 {
 }
@@ -67,6 +67,7 @@ void Player::Update()
 
 void Player::MovementUpdate()
 {
+	auto& player = ECS::GetComponent<PhysicsBody>(MainEntities::MainPlayer());
 	m_moving = false;
 	if (m_hasPhysics)
 	{
@@ -97,14 +98,21 @@ void Player::MovementUpdate()
 			m_facing = RIGHT;
 			m_moving = true;
 		}
-		if (Input::GetKey(Key::Space)) {
-			//if (player.GetVelocity().y == 0.f) {
-				//player.ApplyForce(vec3(0.f,speed,0.f));
-			vel = vec3(0.f, 0.f, 3.f);
-			m_moving = true;
-			//}		
-		}
+		
 
+		if (Input::GetKey(Key::Space)) {
+			if (isJumping == false)
+			{
+				vel = vec3(0.f,0.f, 3.f);
+				if (player.GetPosition().y > 180.f) {
+					isJumping = true;
+				}
+			}
+			else if (player.GetPosition().y < 80.f) {
+				isJumping = false;
+			}
+		}
+		
 		m_physBody->SetVelocity(vel * speed);
 	}
 	else
@@ -135,6 +143,7 @@ void Player::MovementUpdate()
 			m_facing = RIGHT;
 			m_moving = true;
 		}
+		
 	}
 
 	if (Input::GetKeyDown(Key::Space))
@@ -172,6 +181,7 @@ void Player::AnimationUpdate()
 			activeAnimation = IDLE;
 		}
 	}
+	
 	else
 	{
 		activeAnimation = IDLE;

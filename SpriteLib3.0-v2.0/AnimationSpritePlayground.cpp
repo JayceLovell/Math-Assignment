@@ -47,13 +47,13 @@ void AnimationSpritePlayground::InitScene(float windowWidth, float windowHeight)
 		ECS::AttachComponent<AnimationController>(entity);
 
 		//Setup components
-		std::string fileName = "spritesheets/Ninja.png";
+		std::string fileName = "NinjaSpriteSheets.png";
 		std::string animations = "Ninjas.json";
 		ECS::GetComponent<Player>(entity).InitPlayer(fileName,animations,20,30,
 			&ECS::GetComponent<Sprite>(entity), 
 			&ECS::GetComponent<AnimationController>(entity),
 			&ECS::GetComponent<Transform>(entity));
-
+		
 		ECS::GetComponent<Transform>(entity).SetPosition(vec3(0.f, 0.f, 2.f));
 	}
 

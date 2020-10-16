@@ -36,7 +36,7 @@ void Assignment::InitScene(float windowWidth, float windowHeight)
 			}
 			else if (positionForX == 500.f)
 			{
-				Scene::CreateMoveableObject(m_physicsWorld,"LevelSprites/Grass.png",50, 50, vec3(positionForX, 1000.f, 2.f),-50.f,0.f);
+				Scene::CreateMoveableObject(m_physicsWorld,"LevelSprites/Grass.png",50, 50, vec3(positionForX, 1000.f, 5.f),-50.f,0.f);
 				Scene::CreateStaticObject("LevelSprites/Grass.png", 100, 100, 70.f, 20.f, vec3(positionForX, 0.f, 2.f));
 			}
 			else if (positionForX == 800.f)
@@ -45,6 +45,7 @@ void Assignment::InitScene(float windowWidth, float windowHeight)
 				Scene::CreateStaticObject("LevelSprites/Grass.png", 100, 100, 70.f, 20.f, vec3(positionForX, 100.f, 2.f));
 				//item for finish
 				Scene::CreateObject("Ninja Files/Ninja PNG/Items & FireBall/item2.png", 10, 10, vec3(positionForX, 170.f, 2.f));
+				
 			}
 			else {
 				Scene::CreateStaticObject("LevelSprites/Grass.png", 100, 100, 70.f, 20.f, vec3(positionForX, 0.f, 2.f));
@@ -94,7 +95,7 @@ void Assignment::KeyboardHold()
 		else if(player.GetPosition().y < 80.f) {
 			isJumping = false;
 		}
-	}
+	} 
 	if (Input::GetKey(Key::F)) {
 
 	}

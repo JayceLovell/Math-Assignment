@@ -84,7 +84,7 @@ private:
 	bool m_attacking = false;
 	//Have we locked the player from moving during this animation?
 	bool m_locked = false;
-
+	bool isJumping = false;
 	//A reference to our sprite
 	Sprite* m_sprite = nullptr;
 	//A reference to our animation controller
