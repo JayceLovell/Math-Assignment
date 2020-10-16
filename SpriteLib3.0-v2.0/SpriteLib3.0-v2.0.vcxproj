@@ -246,8 +246,13 @@
   <ItemGroup>
     <Image Include="..\..\..\..\..\Pictures\2020-09\NinjaSpriteSheets.png" />
     <Image Include="..\..\..\..\..\Pictures\2020-09\NinjaSpriteSheetsLeft.png" />
+    <Image Include="assets\sprites\NinjaSpriteSheets.png" />
+    <Image Include="assets\sprites\NinjaSpriteSheetsLeft.png" />
     <Image Include="G:\wayne\Desktop\NinjaSpriteSheets.png" />
     <Image Include="G:\wayne\Desktop\NinjaSpriteSheetsLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\sprites\Ninjas.json" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

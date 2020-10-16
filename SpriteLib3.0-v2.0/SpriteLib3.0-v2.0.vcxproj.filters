@@ -346,5 +346,14 @@
     <Image Include="G:\wayne\Desktop\NinjaSpriteSheetsLeft.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="assets\sprites\NinjaSpriteSheets.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\sprites\NinjaSpriteSheetsLeft.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\sprites\Ninjas.json" />
   </ItemGroup>
 </Project>

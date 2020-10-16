@@ -26,7 +26,6 @@ void Assignment::InitScene(float windowWidth, float windowHeight)
 	{
 		for (float positionForX = 0.f; positionForX < 900.f; positionForX+=100.f)
 		{
-			std::cout << "Current Position: " << positionForX << "\n";
 			if (positionForX == 300.f) {
 				Scene::CreateStaticObject("LevelSprites/Grass.png", 100, 100, 70.f, 20.f, vec3(positionForX, 100.f, 2.f));
 			}
@@ -36,7 +35,7 @@ void Assignment::InitScene(float windowWidth, float windowHeight)
 			}
 			else if (positionForX == 500.f)
 			{
-				Scene::CreateMoveableObject(m_physicsWorld,"LevelSprites/Grass.png",50, 50, vec3(positionForX, 1000.f, 5.f),-50.f,0.f);
+				Scene::CreateMoveableObject(m_physicsWorld,"LevelSprites/Grass.png",50, 50, vec3(positionForX, 1000.f, 5.f),40.f,0.f);
 				Scene::CreateStaticObject("LevelSprites/Grass.png", 100, 100, 70.f, 20.f, vec3(positionForX, 0.f, 2.f));
 			}
 			else if (positionForX == 800.f)
@@ -52,7 +51,6 @@ void Assignment::InitScene(float windowWidth, float windowHeight)
 			}
 		}
 	}
-	std::cout << "Test: " << MainEntities::MainPlayer()<<"\n";
 	ECS::GetComponent<HorizontalScroll>(MainEntities::MainCamera()).SetFocus(&ECS::GetComponent<Transform>(MainEntities::MainPlayer()));
 	ECS::GetComponent<VerticalScroll>(MainEntities::MainCamera()).SetFocus(&ECS::GetComponent<Transform>(MainEntities::MainPlayer()));
 }
@@ -70,6 +68,7 @@ void Assignment::KeyboardHold()
 
 	if (Input::GetKey(Key::Shift)) {
 		speed *= 3.f;
+		std::cout << "Your speed: " << speed << "\n";
 	}
 
 	/*if (Input::GetKey(Key::W)) {
@@ -101,6 +100,10 @@ void Assignment::KeyboardHold()
 	}
 
 	player.GetBody()->SetLinearVelocity(speed * vel);
+	if (player.GetPosition().x >= 800.f && player.GetPosition().y >= 170.f) {
+		//end game
+		std::cout << "Congratz you completed the game.\n";
+	}
 }
 
 void Assignment::KeyboardDown()
