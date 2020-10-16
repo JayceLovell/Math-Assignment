@@ -355,5 +355,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="assets\sprites\Ninjas.json" />
+    <None Include="assets\sprites\NinjaSpriteSheets.json" />
   </ItemGroup>
 </Project>
