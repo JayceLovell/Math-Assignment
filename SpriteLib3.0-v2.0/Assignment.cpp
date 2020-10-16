@@ -45,7 +45,7 @@ void Assignment::InitScene(float windowWidth, float windowHeight)
 				Scene::CreateStaticObject("LevelSprites/Grass.png", 100, 100, 70.f, 20.f, vec3(positionForX, 100.f, 2.f));
 				//item for finish
 				Scene::CreateObject("Ninja Files/Ninja PNG/Items & FireBall/item2.png", 10, 10, vec3(positionForX, 170.f, 2.f));
-				
+
 			}
 			else {
 				Scene::CreateStaticObject("LevelSprites/Grass.png", 100, 100, 70.f, 20.f, vec3(positionForX, 0.f, 2.f));

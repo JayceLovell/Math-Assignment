@@ -243,6 +243,10 @@
     <ClCompile Include="Window.cpp" />
     <ClCompile Include="XInput.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\..\..\Pictures\2020-09\NinjaSpriteSheets.png" />
+    <Image Include="..\..\..\..\..\Pictures\2020-09\NinjaSpriteSheetsLeft.png" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
